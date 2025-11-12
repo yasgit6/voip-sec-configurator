@@ -39,7 +39,7 @@ VoIP servers are vulnerable to frequent attacks such as:
 
 ```bash
 # Clone the repository
-`git clone https://github.com/yourusername/voip-sec-configurator.git
+`git clone https://github.com/yasgit6/voip-sec-configurator.git
 `cd voip-sec-configurator
 `# Build and run using Docker
 `docker build -t voip-sec-config .
