@@ -258,3 +258,5 @@ chmod +x iptables_rules.sh
 nano iptables_rules.sh
 # Apply rules:
 ./iptables_rules.sh
+# Apply nftables rules (Recommended):
+nft -f nftables_rules.conf
