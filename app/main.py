@@ -114,3 +114,14 @@ async def custom_docs():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+@app.post("/create-checkout-session")
+async def create_checkout_session(plan: str = "pro"):
+    # Basic pricing
+    prices = {
+        "basic": "price_basic_123",
+        "pro": "price_pro_456", 
+        "enterprise": "price_enterprise_789"
+    }
+    
+    session = create_checkout_session(prices[plan], "customer@example.com")
+    return {"checkout_url": session.url}
