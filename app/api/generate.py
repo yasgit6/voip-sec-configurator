@@ -1,6 +1,16 @@
 import json
 from datetime import datetime
 
+def generate_advanced_features():
+    return {
+        "sipp_scan_protection": True,  # Detect SIP scanners
+        "rate_limiting_rules": True,   # Advanced rate limiting  
+        "geo_blocking": True,          # Block countries
+        "dashboard": True,             # Web dashboard
+        "auto_updates": True,          # Rule updates
+        "support": True               # Priority support
+    }
+
 def generate_iptables_rules(sip_port, rtp_start, rtp_end, enable_ssh, enable_ipv6):
     """Generate iptables firewall rules"""
     
@@ -260,3 +270,4 @@ nano iptables_rules.sh
 ./iptables_rules.sh
 # Apply nftables rules (Recommended):
 nft -f nftables_rules.conf
+# In your generate.py - ADD THESE:
